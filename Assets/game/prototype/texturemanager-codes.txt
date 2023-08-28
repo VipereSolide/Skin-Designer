@@ -1,0 +1,11 @@
+Your selected colors:
+
+    Text: #faf7fc (RGB: 250, 247, 252)
+    Background: #020508 (RGB: 2, 5, 8)
+    Primary: #333447 (RGB: 51, 52, 71)
+    Secondary: #0a1d2f (RGB: 10, 29, 47)
+    Accent: #87749a (RGB: 135, 116, 154)
+
+Realtime Colors link for selected colors: https://realtimecolors.com/?colors=faf7fc-020508-333447-0a1d2f-87749a
+
+Thanks for using RealtimeColors.com!
