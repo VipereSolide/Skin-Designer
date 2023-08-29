@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 698790fada945cb4b817eac6a0103de6, type: 3}
+  m_Name: shortcut profile
+  m_EditorClassIdentifier: 
+  shortcuts:
+  - name: Open Project
+    combination: 320100006f000000
+  - name: Save Project
+    combination: 3201000073000000
+  - name: Camera Pivot
+    combination: 3d010000
+  - name: Camera Pan
+    combination: 3e010000

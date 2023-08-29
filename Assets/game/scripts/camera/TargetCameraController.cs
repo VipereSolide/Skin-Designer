@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine;
 
 using Frames;
+using Core;
 
 namespace Cameras
 {
@@ -11,13 +12,13 @@ namespace Cameras
     {
         [Header("Pivot")]
 
-        public KeyCode pivotKeyCode = KeyCode.Mouse1;
+        public string pivotShortcutName = "Camera Pivot";
         public Transform pivotTransform;
         public float pivotSensitivity = 3.5f;
 
         [Header("Pan")]
 
-        public KeyCode panKeyCode = KeyCode.Mouse2;
+        public string panShortcutName = "Camera Pan";
         public Transform panTransform;
         public float panSensitivity = 3.5f;
 
@@ -36,11 +37,11 @@ namespace Cameras
 
         private void GetInputs()
         {
-            if (Input.GetKeyUp(pivotKeyCode)) isPivotting = false;
-            if (Input.GetKeyDown(pivotKeyCode) && frame.hover) isPivotting = true;
+            if (Input.GetKeyUp(ShortcutManager.GetShortcut(pivotShortcutName).combination[0])) isPivotting = false;
+            if (Input.GetKeyDown(ShortcutManager.GetShortcut(pivotShortcutName).combination[0]) && frame.hover) isPivotting = true;
 
-            if (Input.GetKeyUp(panKeyCode)) isPanning = false;
-            if (Input.GetKeyDown(panKeyCode) && frame.hover) isPanning = true;
+            if (Input.GetKeyUp(ShortcutManager.GetShortcut(panShortcutName).combination[0])) isPanning = false;
+            if (Input.GetKeyDown(ShortcutManager.GetShortcut(panShortcutName).combination[0]) && frame.hover) isPanning = true;
         }
 
         private void Update()

@@ -18,7 +18,7 @@ namespace ContextMenus
 
         [Space]
         public bool hasShortcut = false;
-        public Shortcut shortcut;
+        public string shortcutName;
 
         [Space]
         public UnityEvent action;
@@ -95,7 +95,7 @@ namespace ContextMenus
 
             if (hasShortcut)
             {
-                shortcutText.text = shortcut.ToString();
+                shortcutText.text = ShortcutManager.GetShortcut(shortcutName).ToString();
             }
         }
 
@@ -116,7 +116,7 @@ namespace ContextMenus
                 return;
             }
 
-            if (shortcut.IsPressed())
+            if (ShortcutManager.GetShortcut(shortcutName).IsPressed())
             {
                 Execute();
             }
