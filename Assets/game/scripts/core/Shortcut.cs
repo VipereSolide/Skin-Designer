@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using System.Collections;
 using System.Text;
+using System;
 
 using UnityEngine;
 using Utility;
+using System.Linq;
 
 namespace Core
 {
@@ -23,6 +25,19 @@ namespace Core
             if (key == KeyCode.RightWindows) return KeyCode.LeftWindows;
 
             return key;
+        }
+        
+        public bool CombinationContains(KeyCode keycode)
+        {
+            for(int i = 0; i < combination.Length; i++)
+            {
+                if (combination[i] == keycode)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public bool IsPressed()
@@ -45,6 +60,17 @@ namespace Core
                 }
             }
 
+            foreach(string allKeycodeName in Enum.GetNames(typeof(KeyCode)))
+            {
+                KeyCode allKeys = Enum.Parse<KeyCode>(allKeycodeName);
+
+                if (CombinationContains(allKeys) == false && Input.GetKey(allKeys))
+                {
+                    return false;
+                }
+            }
+
+            Debug.Log("Pressed " + name);
             return true;
         }
 
