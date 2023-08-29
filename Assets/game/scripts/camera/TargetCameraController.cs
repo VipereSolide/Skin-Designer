@@ -65,7 +65,7 @@ namespace Cameras
         {
             float zoomSpeed = Input.GetAxisRaw("Mouse ScrollWheel");
 
-            if (zoomSpeed == 0)
+            if (zoomSpeed == 0 || frame.hover == false)
             {
                 return;
             }
