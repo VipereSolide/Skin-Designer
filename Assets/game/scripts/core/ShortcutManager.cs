@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Collections;
+using System.IO;
 
 using UnityEngine;
-
 
 namespace Core
 {
@@ -27,6 +27,24 @@ namespace Core
         private void Awake()
         {
             RegisterSingleton();
+
+            string path = Application.dataPath + "/data/";
+
+            if (File.Exists(path + "shortcuts.json") == false)
+            {
+                currentProfile = new ShortcutProfile();
+                return;
+            }
+
+            currentProfile = JsonUtility.FromJson<ShortcutProfile>(File.ReadAllText(path + "shortcuts.json"));
+        }
+
+        private void OnApplicationQuit()
+        {
+            string path = Application.dataPath + "/data/";
+            
+            Directory.CreateDirectory(path);
+            File.WriteAllText(path + "shortcuts.json", JsonUtility.ToJson(currentProfile));
         }
 
         public static Shortcut GetShortcut(string shortcutName)

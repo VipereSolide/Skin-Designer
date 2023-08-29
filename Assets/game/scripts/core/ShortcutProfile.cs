@@ -5,8 +5,7 @@ using UnityEngine;
 
 namespace Core
 {
-    [CreateAssetMenu(menuName = "Shortcut Profile")]
-    public class ShortcutProfile : ScriptableObject
+    public class ShortcutProfile
     {
         public Shortcut[] shortcuts =
         {

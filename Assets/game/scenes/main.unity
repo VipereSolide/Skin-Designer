@@ -10447,7 +10447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623174fcfbce7c041a015755c232d048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentProfile: {fileID: 11400000, guid: 03c30480829d4f141b89504174764540, type: 2}
   areShortcutsDisabled: 0
 --- !u!1 &1407978890
 GameObject:
