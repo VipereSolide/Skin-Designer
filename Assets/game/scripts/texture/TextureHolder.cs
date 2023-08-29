@@ -3,6 +3,7 @@ using System.Collections;
 using System.IO;
 
 using UnityEngine;
+using System;
 
 namespace Texture
 {
@@ -40,12 +41,14 @@ namespace Texture
             }
 
             data = File.ReadAllBytes(path);
+            GC.Collect();
 
             loaded = new Texture2D(2, 2);
             loaded.LoadImage(data);
             loaded.Apply();
 
             isLoaded = true;
+            GC.Collect();
             return loaded;
         }
 
