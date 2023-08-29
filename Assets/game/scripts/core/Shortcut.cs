@@ -37,19 +37,9 @@ namespace Core
                 return false;
             }
 
-            foreach(KeyCode key in combination)
+            for (int i = 0; i < combination.Length; i++)
             {
-                if (key == combination[combination.Length - 1])
-                {
-                    if (Input.GetKeyDown(ConvertKeyCode(key)) == false)
-                    {
-                        return false;
-                    }
-
-                    break;
-                }
-
-                if (Input.GetKey(ConvertKeyCode(key)) == false)
+                if (Input.GetKey(ConvertKeyCode(combination[i])) == false)
                 {
                     return false;
                 }
