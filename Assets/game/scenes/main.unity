@@ -1126,10 +1126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3054af0571e9ed4eb1722e1cd234570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pivotKeyCode: 324
+  pivotShortcutName: Camera Pivot
   pivotTransform: {fileID: 2049203269}
   pivotSensitivity: 3.5
-  panKeyCode: 325
+  panShortcutName: Camera Pan
   panTransform: {fileID: 1341121406}
   panSensitivity: 3.5
   zoomSensitivity: 13
@@ -2536,6 +2536,7 @@ MonoBehaviour:
   channel: 2
   selected: 0
   hover: 0
+  shortcutName: Select Normal Channel
   channelNameText: {fileID: 1732147393}
   selectedGameObject: {fileID: 1269826993}
   hoverGameObject: {fileID: 1131574334}
@@ -2998,6 +2999,7 @@ MonoBehaviour:
   channel: 6
   selected: 0
   hover: 0
+  shortcutName: Select Occlusion Channel
   channelNameText: {fileID: 1508938593}
   selectedGameObject: {fileID: 1281844724}
   hoverGameObject: {fileID: 971702148}
@@ -3594,7 +3596,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ctrl + O
+  m_text: None
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95a6ddaeb10d1de4c9b3b09ca77b2d91, type: 2}
   m_sharedMaterial: {fileID: 7377212827059778642, guid: 95a6ddaeb10d1de4c9b3b09ca77b2d91, type: 2}
@@ -4970,6 +4972,7 @@ MonoBehaviour:
   channel: 4
   selected: 0
   hover: 0
+  shortcutName: Select Detail Channel
   channelNameText: {fileID: 1253674197}
   selectedGameObject: {fileID: 67122613}
   hoverGameObject: {fileID: 112640351}
@@ -5807,6 +5810,7 @@ MonoBehaviour:
   channel: 0
   selected: 0
   hover: 0
+  shortcutName: Select Albedo Channel
   channelNameText: {fileID: 1410399335}
   selectedGameObject: {fileID: 708083239}
   hoverGameObject: {fileID: 171055776}
@@ -8759,6 +8763,7 @@ MonoBehaviour:
   channel: 1
   selected: 0
   hover: 0
+  shortcutName: Select Metallic Channel
   channelNameText: {fileID: 811311280}
   selectedGameObject: {fileID: 33020924}
   hoverGameObject: {fileID: 1878505415}
@@ -9544,6 +9549,7 @@ MonoBehaviour:
   channel: 3
   selected: 0
   hover: 0
+  shortcutName: Select Emission Channel
   channelNameText: {fileID: 1835751655}
   selectedGameObject: {fileID: 1267160647}
   hoverGameObject: {fileID: 2044541020}
@@ -10115,6 +10121,7 @@ MonoBehaviour:
   channel: 5
   selected: 0
   hover: 0
+  shortcutName: Select Height Channel
   channelNameText: {fileID: 1271513757}
   selectedGameObject: {fileID: 1504682976}
   hoverGameObject: {fileID: 809572238}
@@ -12819,7 +12826,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ctrl + S
+  m_text: None
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95a6ddaeb10d1de4c9b3b09ca77b2d91, type: 2}
   m_sharedMaterial: {fileID: 7377212827059778642, guid: 95a6ddaeb10d1de4c9b3b09ca77b2d91, type: 2}

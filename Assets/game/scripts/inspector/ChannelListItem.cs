@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine;
 
 using TMPro;
+using Core;
 
 namespace Inspector
 {
@@ -12,8 +13,14 @@ namespace Inspector
     {
         public int channel;
 
+        [Space]
+
         public bool selected;
         public bool hover;
+
+        [Space]
+
+        public string shortcutName;
 
         [Header("Resources")]
 
@@ -22,6 +29,11 @@ namespace Inspector
         public GameObject hoverGameObject;
 
         public void OnPointerDown(PointerEventData eventData)
+        {
+            Select();
+        }
+
+        public void Select()
         {
             if (this.selected)
             {
@@ -84,6 +96,14 @@ namespace Inspector
         {
             this.selected = selected;
             UpdateGraphics();
+        }
+
+        private void Update()
+        {
+            if (ShortcutManager.GetShortcut(shortcutName).IsPressed())
+            {
+                Select();
+            }
         }
     }
 }

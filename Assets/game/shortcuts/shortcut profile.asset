@@ -18,6 +18,20 @@ MonoBehaviour:
   - name: Save Project
     combination: 3201000073000000
   - name: Camera Pivot
-    combination: 3d010000
+    combination: 44010000
   - name: Camera Pan
-    combination: 3e010000
+    combination: 45010000
+  - name: Select Albedo Channel
+    combination: 61000000
+  - name: Select Metallic Channel
+    combination: 6d000000
+  - name: Select Normal Channel
+    combination: 6e000000
+  - name: Select Emission Channel
+    combination: 65000000
+  - name: Select Detail Channel
+    combination: 64000000
+  - name: Select Height Channel
+    combination: 68000000
+  - name: Select Occlusion Channel
+    combination: 6f000000
