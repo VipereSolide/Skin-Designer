@@ -32,6 +32,11 @@ namespace Core
                 return false;
             }
 
+            if (ShortcutManager.instance.areShortcutsDisabled)
+            {
+                return false;
+            }
+
             foreach(KeyCode key in combination)
             {
                 if (key == combination[combination.Length - 1])

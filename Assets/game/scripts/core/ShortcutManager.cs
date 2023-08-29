@@ -11,6 +11,7 @@ namespace Core
         public static ShortcutManager instance { get; private set; }
 
         public ShortcutProfile currentProfile;
+        public bool areShortcutsDisabled = false;
 
         private void RegisterSingleton()
         {
