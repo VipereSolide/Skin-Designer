@@ -51,5 +51,10 @@ namespace Inspector
                 TargetObject.instance.SetMaterialTexture(channel, channels[channel].texture.GetOrLoad());
             }
         }
+
+        public void SetTargetTextureFromChannel(int channel, Texture2D texture)
+        {
+            TargetObject.instance.SetMaterialTexture(channel, texture);
+        }
     }
 }

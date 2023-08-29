@@ -81,12 +81,13 @@ namespace Inspector
                 }
                 else
                 {
-                    UnityEngine.Texture materialTexture = TargetObject.instance.meshRenderer.material.GetTexture(TargetObject.TextureIndexToTextureName(channel));
+                    UnityEngine.Texture materialTexture = TargetObject.instance.target.defaultMaterial.GetTexture(TargetObject.TextureIndexToTextureName(channel));
 
                     unloadedTextureGameObject.SetActive(materialTexture == null);
                     ChannelManager.instance.channels[channel].enabled = (materialTexture != null);
 
                     channelTextureHolder.texture = materialTexture;
+                    ChannelManager.instance.SetTargetTextureFromChannel(channel, (Texture2D) materialTexture);
                 }
             }
             else

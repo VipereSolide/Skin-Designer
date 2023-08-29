@@ -17,6 +17,7 @@ namespace Targets
 
         public MeshFilter meshFilter;
         public MeshRenderer meshRenderer;
+        public Texture2D defaultEmissionTexture;
 
         private void Awake()
         {
@@ -91,7 +92,7 @@ namespace Targets
 
             if (i == 3)
             {
-                Color color = (texture == null) ? Color.black : Color.white;
+                Color color = (texture == null || texture == defaultEmissionTexture) ? Color.black : Color.white;
                 meshRenderer.material.SetColor("_EmissionColor", color);
             }
         }
