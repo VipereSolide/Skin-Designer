@@ -10,6 +10,11 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+# For legal reasons
+/Assets/Modern UI Pack/
+/Assets/game/models/targets/
+/Assets/game/textures/targets/
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
