@@ -9,6 +9,14 @@ namespace UI
     [ExecuteAlways]
     public class InteractableElement : MonoBehaviour
     {
+        [Header("Toggle")]
+
+        public bool linkToggle;
+        public CustomToggle toggle;
+        public bool inverse;
+
+        [Header("State")]
+
         [SerializeField]
         private bool isInteractable = true;
 
@@ -20,6 +28,14 @@ namespace UI
         private void Awake()
         {
             group = GetComponent<CanvasGroup>();
+        }
+
+        private void Start()
+        {
+            if (linkToggle)
+            {
+                toggle.onChangeState.AddListener(() => { interactable = (inverse) ? !toggle.activated : toggle.activated; });
+            }
         }
 
         private void OnValidate()
