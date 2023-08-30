@@ -5,6 +5,7 @@ using System;
 
 using UnityEngine;
 
+using Header.RecentProjects;
 using Inspector;
 using Texture;
 using SFB;
@@ -83,6 +84,7 @@ namespace Projects
                 ChannelViewer.instance.InitChannel();
             }
 
+            RecentProjectRegisterer.instance.RegisterProject(currentProject);
             manager.UpdateTargetTextureFromChannelTextures();
         }
 
@@ -96,9 +98,20 @@ namespace Projects
                 return;
             }
 
-            string projectContent = File.ReadAllText(paths[0]);
+            OpenProjectFromURL(paths[0]);
+        }
+
+        public void OpenProjectFromURL(string url)
+        {
+            if (string.IsNullOrEmpty(url))
+            {
+                Debug.LogError("Cannot open project for null or empty url!");
+                return;
+            }
+
+            string projectContent = File.ReadAllText(url);
             Project project = FromSavedProject(projectContent);
-            project.path = paths[0];
+            project.path = url;
 
             OpenProject(project);
         }

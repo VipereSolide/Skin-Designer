@@ -87,7 +87,7 @@ namespace ContextMenus
             onHover?.Invoke();
         }
 
-        private void UpdateGraphics()
+        public void UpdateGraphics()
         {
             hoverGameObject.SetActive(hover);
 

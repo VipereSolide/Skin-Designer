@@ -70,7 +70,6 @@ namespace Core
                 }
             }
 
-            Debug.Log("Pressed " + name);
             return true;
         }
 
