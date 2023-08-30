@@ -37,6 +37,18 @@ namespace Core
             }
 
             currentProfile = JsonUtility.FromJson<ShortcutProfile>(File.ReadAllText(path + "shortcuts.json"));
+
+            ShortcutProfile defaultProfile = new ShortcutProfile();
+            if (currentProfile.shortcuts.Count < defaultProfile.shortcuts.Count)
+            {
+                for (int i = 0; i < defaultProfile.shortcuts.Count; i++)
+                {
+                    if (currentProfile.GetShortcutByName(defaultProfile.shortcuts[i].name) == null)
+                    {
+                        currentProfile.shortcuts.Add(defaultProfile.shortcuts[i]);
+                    }
+                }
+            }
         }
 
         private void OnApplicationQuit()

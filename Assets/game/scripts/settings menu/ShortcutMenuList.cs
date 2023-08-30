@@ -23,7 +23,7 @@ namespace SettingsMenu
             ShortcutManager manager = ShortcutManager.instance;
             ShortcutProfile profile = manager.currentProfile;
 
-            for(int i = 0; i < profile.shortcuts.Length; i++)
+            for(int i = 0; i < profile.shortcuts.Count; i++)
             {
                 ShortcutMenuShortcutObject shortcutObject = Instantiate(shortcutPrefab, shortcutsContainer);
                 shortcutObject.shortcut = i;
