@@ -8168,34 +8168,10 @@ MonoBehaviour:
   action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1672785814}
-        m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
-        m_MethodName: set_alpha
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1672785814}
-        m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
-        m_MethodName: set_blocksRaycasts
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1672785814}
-        m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
-        m_MethodName: set_interactable
-        m_Mode: 6
+      - m_Target: {fileID: 1672785815}
+        m_TargetAssemblyTypeName: SettingsMenu.SettingsMenu, Assembly-CSharp
+        m_MethodName: Open
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11050,34 +11026,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1672785814}
-          m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
-          m_MethodName: set_alpha
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1672785814}
-          m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
-          m_MethodName: set_blocksRaycasts
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1672785814}
-          m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
-          m_MethodName: set_interactable
-          m_Mode: 6
+        - m_Target: {fileID: 1672785815}
+          m_TargetAssemblyTypeName: SettingsMenu.SettingsMenu, Assembly-CSharp
+          m_MethodName: Close
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12313,6 +12265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1672785813}
   - component: {fileID: 1672785814}
+  - component: {fileID: 1672785815}
   m_Layer: 5
   m_Name: settings menu container
   m_TagString: Untagged
@@ -12354,6 +12307,20 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &1672785815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672785812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce4735147d910e4ab5c380c9107e388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnabled: 0
+  canvasGroup: {fileID: 1672785814}
 --- !u!1 &1677951928
 GameObject:
   m_ObjectHideFlags: 0
@@ -13799,6 +13766,7 @@ MonoBehaviour:
   recentProjectsContainer: {fileID: 1960397849}
   contextMenu: {fileID: 1680649485}
   contextMenuTransform: {fileID: 1680649484}
+  fileContextMenu: {fileID: 0}
 --- !u!1 &1873320456
 GameObject:
   m_ObjectHideFlags: 0
