@@ -34,8 +34,14 @@ namespace UI
         {
             if (linkToggle)
             {
-                toggle.onChangeState.AddListener(() => { interactable = (inverse) ? !toggle.activated : toggle.activated; });
+                UpdateToggleState();
+                toggle.onChangeState.AddListener(() => { UpdateToggleState(); });
             }
+        }
+
+        private void UpdateToggleState()
+        {
+            interactable = (inverse) ? !toggle.activated : toggle.activated;
         }
 
         private void OnValidate()
