@@ -15,6 +15,7 @@ namespace SettingsMenu
         [Header("Resources")]
 
         public CanvasGroup canvasGroup;
+        public ShortcutManager shortcutManager;
 
         private void RegisterSingleton()
         {
@@ -51,7 +52,8 @@ namespace SettingsMenu
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape) && isEnabled && ShortcutManager.instance.areShortcutsDisabled == false)
+            if (isEnabled && shortcutManager.areShortcutsDisabled == false &&
+                Input.GetKeyDown(shortcutManager.currentProfile.GetShortcutByName("Escape").combination[0]))
             {
                 Close();
             }

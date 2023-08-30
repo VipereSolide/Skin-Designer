@@ -13,6 +13,7 @@ namespace Core
             new Shortcut("Save Project", KeyCode.LeftControl, KeyCode.S),
             new Shortcut("Camera Pivot", KeyCode.Mouse1),
             new Shortcut("Camera Pan", KeyCode.Mouse2),
+            new Shortcut("Escape", KeyCode.Escape),
         };
 
         public Shortcut GetShortcutByName(string shortcutName)

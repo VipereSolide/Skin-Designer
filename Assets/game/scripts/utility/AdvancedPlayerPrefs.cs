@@ -48,7 +48,6 @@ namespace Utility
                 }
                 else
                 {
-                    Debug.LogWarning($"Last found key was index {i}.");
                     break;
                 }
             }
